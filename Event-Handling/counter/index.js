@@ -4,6 +4,7 @@ const resetCounter = () => {
     counter.value = 0;
 }
 
-const updateCounter = (num) => {
-    counter.value = parseInt(counter.value) + num;
+const updateCounter = (event) => {
+    debugger;
+    counter.value = parseInt(counter.value) + parseInt(event.target.innerText);
 }
