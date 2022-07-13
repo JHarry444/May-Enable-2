@@ -1,6 +1,6 @@
 "use strict";
 
-document.querySelector("body > form").addEventListener("submit", function (event) {
+document.querySelector("form").addEventListener("submit", function (event) {
     event.preventDefault(); // turns off the page refresh/redirect
     // setTimeout(() => console.log("YO!"), 1_000);
 
@@ -57,6 +57,7 @@ function renderDinos() {
 
                 const dinoDelete = document.createElement('button');
                 dinoDelete.innerText = "DELETE";
+                dinoDelete.classList.add("btn", "btn-danger");
                 dinoDelete.addEventListener("click", () => {
                     console.log("DINO: ", dino);
                     deleteDino(dino.id);
